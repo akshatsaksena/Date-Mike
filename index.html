@@ -14,52 +14,52 @@
 
   <main class="app">
     <header class="hero card glass">
-      <p class="kicker">Chaotic humor, respectful behavior.</p>
-      <h1>Office Chaos Coach 🧃💼</h1>
-      <p>Take the hard-mode office vibe test and get spicy meme templates that stay HR-safe, socially smart, and painfully relatable.</p>
+      <p class="kicker">Unhinged humor. Ethical spine.</p>
+      <h1>Office Chaos Coach 🧃💼🇮🇳</h1>
+      <p>Take an ethics stress-test with peak desi office humor. We roast situations, not people.</p>
     </header>
 
     <section class="card" id="quiz">
-      <h2>Hard-Mode Personality Quiz</h2>
-      <p class="sub">Pick the answer you'd actually do under pressure 👇</p>
+      <h2>Ethics x Chaos Quiz (Hard Mode)</h2>
+      <p class="sub">The options are messy. Choose the one you'd actually do when stakes are high 👇</p>
       <form id="vibe-form">
         <fieldset>
-          <legend>1) Your colleague posts “finished this at 2:11am” in a project channel. You respond:</legend>
-          <label><input type="radio" name="q1" value="chaos" required> “You're a legend. Also go drink water and log off 😭”</label>
-          <label><input type="radio" name="q1" value="steady"> “Huge effort — let's protect your workload this week.”</label>
-          <label><input type="radio" name="q1" value="spark"> “Drop the deck. We're doing a victory thread now.”</label>
+          <legend>1) Teammate asks you to hide a bug before leadership demo “just for today”.</legend>
+          <label><input type="radio" name="q1" value="steady" required> Refuse politely, log risk, and suggest a safe workaround.</label>
+          <label><input type="radio" name="q1" value="spark"> Surface it in standup with zero blame and focus on fix plan.</label>
+          <label><input type="radio" name="q1" value="chaos"> Say “bhai this is Kalesh-as-a-Service” and escalate with evidence.</label>
         </fieldset>
 
         <fieldset>
-          <legend>2) Someone keeps sending mixed signals in DMs. Your next move:</legend>
-          <label><input type="radio" name="q2" value="steady" required> Ask directly and kindly what tone they’re comfortable with.</label>
-          <label><input type="radio" name="q2" value="spark"> Pivot to public/team-context convos and keep it light.</label>
-          <label><input type="radio" name="q2" value="chaos"> Post a neutral meme in main chat and reset to friendly mode.</label>
+          <legend>2) A manager cracks a mean joke about someone’s accent in a meeting.</legend>
+          <label><input type="radio" name="q2" value="spark" required> Redirect instantly: “Let's keep banter kind and focus on agenda.”</label>
+          <label><input type="radio" name="q2" value="steady"> Follow up 1:1, name the impact, document concern if repeated.</label>
+          <label><input type="radio" name="q2" value="chaos"> Drop a deadpan “Not cool, sirji” and move meeting back to work.</label>
         </fieldset>
 
         <fieldset>
-          <legend>3) At team happy hour, your joke lands badly. How do you recover?</legend>
-          <label><input type="radio" name="q3" value="spark" required> Quick apology, then spotlight someone else's win.</label>
-          <label><input type="radio" name="q3" value="steady"> Own it directly: “That came out wrong, my bad.”</label>
-          <label><input type="radio" name="q3" value="chaos"> Self-roast once, then fully change topic.</label>
+          <legend>3) Colleague forwards private gossip with “don't share”.</legend>
+          <label><input type="radio" name="q3" value="steady" required> Delete and reply: “Let's keep this professional.”</label>
+          <label><input type="radio" name="q3" value="chaos"> React with “yeh Bigg Boss nahi hai” and shut the thread.</label>
+          <label><input type="radio" name="q3" value="spark"> Nudge toward support: “If someone needs help, let's do that directly.”</label>
         </fieldset>
 
         <fieldset>
-          <legend>4) Your team ships a nightmare sprint. What's your celebration style?</legend>
-          <label><input type="radio" name="q4" value="spark" required> Hype everyone with personalized shoutouts.</label>
-          <label><input type="radio" name="q4" value="chaos"> Fire off one elite meme pack + “we survived” GIF energy.</label>
-          <label><input type="radio" name="q4" value="steady"> Calm debrief first, then celebrate the process wins.</label>
+          <legend>4) Team expects unpaid weekend work because “startup spirit”.</legend>
+          <label><input type="radio" name="q4" value="chaos" required> “Jugaad ≠ burnout.” Push back loudly with priorities.</label>
+          <label><input type="radio" name="q4" value="steady"> Ask for scope cuts, comp-off policy, and explicit approval trail.</label>
+          <label><input type="radio" name="q4" value="spark"> Rally team to present a realistic timeline with shared voice.</label>
         </fieldset>
 
-        <button type="submit">Summon My Chaos Report</button>
+        <button type="submit">Drop My Ethics Roast</button>
       </form>
     </section>
 
     <section class="card hidden" id="result" aria-live="polite">
       <h2 id="result-title"></h2>
       <p id="result-copy"></p>
-      <h3>Generated Meme Set</h3>
-      <p class="sub">Auto-rendered meme images based on your answers.</p>
+      <h3>Meme Pack (Pinterest-sourced templates + generated captions)</h3>
+      <p class="sub">Each card links to a Pinterest meme search template and overlays a custom caption from your vibe.</p>
       <div id="memes" class="meme-grid"></div>
       <h3>Playbook</h3>
       <ul id="tips"></ul>
@@ -68,9 +68,12 @@
 
   <template id="meme-template">
     <article class="meme card-mini">
-      <img alt="Generated office meme" class="meme-img" />
+      <a class="pin-link" target="_blank" rel="noopener noreferrer">
+        <img alt="Generated office meme" class="meme-img" />
+      </a>
       <h4></h4>
       <p class="caption"></p>
+      <a class="pin-search" target="_blank" rel="noopener noreferrer">Open Pinterest source</a>
     </article>
   </template>
 

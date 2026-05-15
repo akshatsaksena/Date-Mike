@@ -1,6 +1,6 @@
 # Office Chaos Coach
 
-A bright, Gen Z-styled static web app with a harder/funnier office social quiz and auto-generated meme images.
+A Gen Z-styled static web app with ethics-heavy office questions, Indian-humor flavored results, generated meme cards, and Pinterest meme-source links.
 
 ## Run
 Open `index.html` in your browser.

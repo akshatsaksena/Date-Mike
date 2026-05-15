@@ -50,3 +50,6 @@ button {
 .bg-blobs span:nth-child(1){ background:var(--blue); top:-80px; left:-70px; }
 .bg-blobs span:nth-child(2){ background:var(--pink); top:30%; right:-120px; }
 .bg-blobs span:nth-child(3){ background:var(--orange); bottom:-100px; left:30%; }
+
+.pin-search{display:inline-block;margin-top:.45rem;color:#9ff7ff;font-weight:700;}
+.pin-link{display:block;}
