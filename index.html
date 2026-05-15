@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Office Chaos Coach</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="bg-blobs" aria-hidden="true"><span></span><span></span><span></span></div>
+
+  <main class="app">
+    <header class="hero card glass">
+      <p class="kicker">Chaotic humor, respectful behavior.</p>
+      <h1>Office Chaos Coach 🧃💼</h1>
+      <p>Take the hard-mode office vibe test and get spicy meme templates that stay HR-safe, socially smart, and painfully relatable.</p>
+    </header>
+
+    <section class="card" id="quiz">
+      <h2>Hard-Mode Personality Quiz</h2>
+      <p class="sub">Pick the answer you'd actually do under pressure 👇</p>
+      <form id="vibe-form">
+        <fieldset>
+          <legend>1) Your colleague posts “finished this at 2:11am” in a project channel. You respond:</legend>
+          <label><input type="radio" name="q1" value="chaos" required> “You're a legend. Also go drink water and log off 😭”</label>
+          <label><input type="radio" name="q1" value="steady"> “Huge effort — let's protect your workload this week.”</label>
+          <label><input type="radio" name="q1" value="spark"> “Drop the deck. We're doing a victory thread now.”</label>
+        </fieldset>
+
+        <fieldset>
+          <legend>2) Someone keeps sending mixed signals in DMs. Your next move:</legend>
+          <label><input type="radio" name="q2" value="steady" required> Ask directly and kindly what tone they’re comfortable with.</label>
+          <label><input type="radio" name="q2" value="spark"> Pivot to public/team-context convos and keep it light.</label>
+          <label><input type="radio" name="q2" value="chaos"> Post a neutral meme in main chat and reset to friendly mode.</label>
+        </fieldset>
+
+        <fieldset>
+          <legend>3) At team happy hour, your joke lands badly. How do you recover?</legend>
+          <label><input type="radio" name="q3" value="spark" required> Quick apology, then spotlight someone else's win.</label>
+          <label><input type="radio" name="q3" value="steady"> Own it directly: “That came out wrong, my bad.”</label>
+          <label><input type="radio" name="q3" value="chaos"> Self-roast once, then fully change topic.</label>
+        </fieldset>
+
+        <fieldset>
+          <legend>4) Your team ships a nightmare sprint. What's your celebration style?</legend>
+          <label><input type="radio" name="q4" value="spark" required> Hype everyone with personalized shoutouts.</label>
+          <label><input type="radio" name="q4" value="chaos"> Fire off one elite meme pack + “we survived” GIF energy.</label>
+          <label><input type="radio" name="q4" value="steady"> Calm debrief first, then celebrate the process wins.</label>
+        </fieldset>
+
+        <button type="submit">Summon My Chaos Report</button>
+      </form>
+    </section>
+
+    <section class="card hidden" id="result" aria-live="polite">
+      <h2 id="result-title"></h2>
+      <p id="result-copy"></p>
+      <h3>Generated Meme Set</h3>
+      <p class="sub">Auto-rendered meme images based on your answers.</p>
+      <div id="memes" class="meme-grid"></div>
+      <h3>Playbook</h3>
+      <ul id="tips"></ul>
+    </section>
+  </main>
+
+  <template id="meme-template">
+    <article class="meme card-mini">
+      <img alt="Generated office meme" class="meme-img" />
+      <h4></h4>
+      <p class="caption"></p>
+    </article>
+  </template>
+
+  <script src="script.js"></script>
+</body>
+</html>

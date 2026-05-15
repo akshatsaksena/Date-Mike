@@ -1,0 +1,52 @@
+:root {
+  --bg: #13002d;
+  --pink: #ff2ea6;
+  --blue: #22d3ff;
+  --lime: #cbff2e;
+  --orange: #ff8a3d;
+  --text: #f8f8ff;
+  --panel: #210a43;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Inter, system-ui, sans-serif;
+  color: var(--text);
+  background: radial-gradient(circle at top, #3b0073 0%, var(--bg) 48%, #090013 100%);
+  min-height: 100vh;
+}
+.app { width: min(1024px, 92vw); margin: 2rem auto 3rem; display: grid; gap: 1rem; }
+.card {
+  background: linear-gradient(145deg, rgba(255,255,255,0.11), rgba(255,255,255,0.03));
+  border: 1px solid rgba(255,255,255,0.22);
+  border-radius: 22px;
+  padding: 1.2rem 1.3rem;
+  box-shadow: 0 12px 36px rgba(0,0,0,.35);
+}
+.glass { backdrop-filter: blur(9px); }
+.kicker { color: var(--lime); font-weight: 800; letter-spacing: .04em; margin:0; text-transform: uppercase; font-size:.8rem; }
+.hero h1 { font: 900 clamp(2rem, 6vw, 3.3rem)/1.02 'Space Grotesk', sans-serif; margin:.3rem 0 .5rem; }
+.sub { opacity: .88; margin-top: 0; }
+fieldset { border: 1px solid rgba(255,255,255,.2); border-radius: 14px; margin: .9rem 0; padding: .8rem; }
+legend { color: var(--blue); font-weight: 700; }
+label { display:block; margin:.45rem 0; }
+button {
+  margin-top: .7rem;
+  border:none;
+  border-radius:999px;
+  padding:.82rem 1.05rem;
+  font-weight:900;
+  color:#fff;
+  background: linear-gradient(90deg, var(--pink), var(--orange), var(--blue));
+  cursor:pointer;
+}
+.hidden { display:none; }
+.meme-grid { display:grid; grid-template-columns: repeat(auto-fit,minmax(230px,1fr)); gap:.9rem; }
+.card-mini { background:var(--panel); border:1px solid rgba(255,255,255,.22); border-radius:16px; padding:.7rem; }
+.meme-img { width:100%; border-radius:12px; border:1px solid rgba(255,255,255,.2); display:block; }
+.meme h4 { margin:.6rem 0 .3rem; color:var(--lime); }
+.caption { margin:0; color:#ffd8f0; font-weight:700; }
+.bg-blobs span { position:fixed; width:320px; height:320px; border-radius:50%; filter: blur(74px); opacity:.32; }
+.bg-blobs span:nth-child(1){ background:var(--blue); top:-80px; left:-70px; }
+.bg-blobs span:nth-child(2){ background:var(--pink); top:30%; right:-120px; }
+.bg-blobs span:nth-child(3){ background:var(--orange); bottom:-100px; left:30%; }
